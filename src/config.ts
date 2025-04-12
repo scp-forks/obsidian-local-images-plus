@@ -5,7 +5,7 @@ export const APP_TITLE = "Local Images Plus  0.16.3";
 
 //Option to enable debugging
 
-let VERBOSE = false;
+let VERBOSE = true;
 
 function setDebug(value: boolean = false){
     VERBOSE =  value;
@@ -31,7 +31,7 @@ export const ANCHOR_S = /(?<anchor>.+)\|(?<size>[0-9]+)/g
 export const MD_SEARCH_PATTERN =
 [
 //file link
-/\!\[(?<anchor>(.{0}|(?!^file\:\/)+?))\]\((?<link>((file\:\/)[^\!]+?(\.{1}.{3,4}\) {0,1}|\)$|\)\n|\)])))/gm,
+/\!\[(?<anchor>([^\]]*))\]\((?<link>((file\:\/)[^\!]+?(\.{1}.{3,4}\) {0,1}|\)$|\)\n|\)])))/gm,
 //hypertext link
 ///\!\[(?<anchor>(.{0}|[^\[]+?))\]\((?<link>((http(s){0,1}).+?(\) |\..{3,4}\)|\)$|\)\n|\)\]|\)\[)))/gm,
  
